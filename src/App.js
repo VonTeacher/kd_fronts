@@ -54,11 +54,11 @@ function DisplayAllAlbums() {
 function App() {
   return (
     <div>
-      <h1>Kate's Collection: Artists</h1>
+      <h1>Artists</h1>
       <br />
       <DisplayAllArtists />
       <br />
-      <h1>Kate's Collection: Albums</h1>
+      <h1>Albums</h1>
       <br />
       <DisplayAllAlbums />
     </div>
