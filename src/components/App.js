@@ -1,3 +1,4 @@
+import './../styles/App.css';
 import { useQuery, gql } from '@apollo/client';
 
 const GET_ALL_ARTISTS = gql`

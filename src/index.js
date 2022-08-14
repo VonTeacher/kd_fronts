@@ -5,7 +5,8 @@ import {
   InMemoryCache,
   ApolloProvider
 } from '@apollo/client';
-import App from './App';
+import './styles/index.css';
+import App from './components/App';
 
 const clientUri = () => {
   return (!process.env.NODE_ENV  || process.env.NODE_ENV === "development")
