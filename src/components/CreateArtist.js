@@ -17,21 +17,6 @@ const CREATE_ARTIST_MUTATION = gql`
   }
 `;
 
-/*
-  mutation {
-    createArtist(input: {
-      name: $name
-    }) {
-      artist {
-        id
-        name
-        slug
-      }
-    }
-  }
-
-*/
-
 const CreateArtist = () => {
   const [formState, setFormState] = useState({
     name: ''
