@@ -2,12 +2,8 @@ import React, { useState } from 'react';
 import { useMutation, gql } from '@apollo/client';
 
 const CREATE_ARTIST_MUTATION = gql`
-  mutation CreateArtistMutation($name:String!){
-    createArtist(input:
-      {
-        name:$name
-      }
-    ) {
+  mutation CreateArtistMutation($name:String!) {
+    createArtist(input: { name:$name }) {
       artist {
         id
         name
