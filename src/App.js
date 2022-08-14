@@ -15,6 +15,7 @@ const GET_ALL_ALBUMS = gql`
       id
       title
       artist
+      user
     }
   }
 `;
@@ -42,10 +43,10 @@ function DisplayAllAlbums() {
     console.log(error)
   };
 
-  return data.albums.map(({ id, title, artist }) => {
+  return data.albums.map(({ id, title, artist, user }) => {
     return (
       <div key={id}>
-        <div>{title} by {artist}</div>
+        <div>{title} by {artist} (owned by {user})</div>
       </div>
     )
   })
