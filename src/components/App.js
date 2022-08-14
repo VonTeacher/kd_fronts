@@ -1,6 +1,10 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Header from './Header';
+import HomePage from './HomePage';
 import CreateArtist from './CreateArtist';
 import ArtistList from './ArtistList';
+// import Login from './Login';
 import './../styles/App.css';
 
 // const GET_ALL_ALBUMS = gql`
@@ -48,10 +52,16 @@ import './../styles/App.css';
 
 function App() {
   return (
-    <>
-      <ArtistList />
-      <CreateArtist />
-    </>
+    <div className="center w85">
+      <Header />
+      <div className="ph3 pv1 background-gray">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/artists" element={<ArtistList />}/>
+          <Route path="/create-artist" element={<CreateArtist />} />
+        </Routes>
+      </div>
+    </div>
   );
 }
 

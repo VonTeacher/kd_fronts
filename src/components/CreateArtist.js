@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useMutation, gql } from '@apollo/client';
+import { useNavigate } from 'react-router-dom';
 
 const CREATE_ARTIST_MUTATION = gql`
   mutation CreateArtistMutation($name:String!) {
@@ -14,6 +15,8 @@ const CREATE_ARTIST_MUTATION = gql`
 `;
 
 const CreateArtist = () => {
+  const navigate = useNavigate();
+
   const [formState, setFormState] = useState({
     name: ''
   });
@@ -21,7 +24,8 @@ const CreateArtist = () => {
   const [createArtist] = useMutation(CREATE_ARTIST_MUTATION, {
     variables: {
       name: formState.name
-    }
+    },
+    onCompleted: () => navigate("/artists")
   });
 
   return (

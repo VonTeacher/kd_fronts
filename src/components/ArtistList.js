@@ -1,6 +1,6 @@
 import React from 'react';
-import Artist from './Artist';
 import { useQuery, gql } from '@apollo/client';
+import Artist from './Artist';
 
 const GET_ALL_ARTISTS = gql`
   query GetAllArtists {
