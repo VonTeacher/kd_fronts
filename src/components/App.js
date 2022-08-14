@@ -1,4 +1,5 @@
 import React from 'react';
+import CreateArtist from './CreateArtist';
 import ArtistList from './ArtistList';
 import './../styles/App.css';
 
@@ -49,6 +50,7 @@ function App() {
   return (
     <>
       <ArtistList />
+      <CreateArtist />
     </>
   );
 }
